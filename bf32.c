@@ -21,7 +21,7 @@ int main(int argc, char* argv[]) {
             case ']': if (tape[p] != 0) { while (!((src[i] == '[')&&(--d==0))) { d = (src[i]==']')?d+1:d; i--; } } break;
             case '>': p = (p == 30000-1) ? 0 : p + 1; break;
             case '<': p = (p == 0) ? 30000-1 : p -1; break;
-            case '.': putchar(tape[p]); break;
+            case '.': putchar(tape[p]); fflush(stdout); break;
             case ',': tape[p] = getchar(); break;
             default: break;
         }
